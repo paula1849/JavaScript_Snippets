@@ -1,0 +1,13 @@
+// making me put in my age
+var myAge = 56;
+// first two years of cats lives are diffferent. This varible will change
+var earlyYears = 2;
+earlyYears *= 25;
+//comment
+var laterYears = myAge - 2;
+laterYears *= 4;
+laterYears
+var myAgeInCatYears = earlyYears + laterYears
+myAgeInCatYears
+var myName = 'Paula'
+console.log("My mame is " + myName + ". I am " + myAge +' years old in human years which is ' + myAgeInCatYears + ' years old in cat years')
