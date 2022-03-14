@@ -1,0 +1,13 @@
+// a code sample from the JavaScript class review
+var kelvinTemp = 301;
+var celsiusTemp = kelvinTemp - 273.15;
+var fahrenhietTemp = celsiusTemp * (9/5) + 32;
+
+//testing math
+//console.log(fahrenhietTemp)
+
+//rounding the value of fahrenhietTemp
+fahrenhietTemp = Math.floor(fahrenhietTemp);
+
+console.log('The tempature is ' + fahrenhietTemp + ' degrees Farenheith!')
+
