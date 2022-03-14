@@ -1,0 +1,62 @@
+function getUserChoice (userInput) {
+  userInput = userInput.toLowerCase();
+  if (userInput ==='superman' || userInput ==='kryptonite' || userInput === 'steel bar'){
+    return userInput;
+  } else {
+    return 'Please enter a valid option';
+  }
+}
+//console.log(getUserChoice('fdear'));
+function getComputerChoice () {
+  var randomNumber = Math.floor(Math.random() * 3);
+  if (randomNumber === 0) {
+    return 'superman';
+  } else if (randomNumber === 1){
+    return 'kryptonite';
+  } else {
+    return 'steel bar';
+  }
+}
+
+//console.log (getComputerChoice());
+
+function determineWinner(userChoice, computerChoice){
+  if (userChoice === computerChoice) {
+    return 'it is a tie';
+  }
+  if (userChoice ==='kryptonite'){
+    if (computerChoice ==='superman'){
+      return 'Superman is beaten by kryptonite';
+    }
+    else {
+      return 'The steel bar crushes the kryptonite'
+    }
+  }
+  if (userChoice ==='superman'){
+    if (computerChoice ==='steel bar'){
+      return 'Superman bends the steel bar';
+    }
+    else {
+      return 'Superman is beaten by kryptonite';
+    }
+  }
+  if (userChoice === 'steel bar'){
+    if (computerChoice === 'kryptonite'){
+      return 'The steel bar crushes the kryptonite';
+    }
+  }
+  else {
+    return 'Superman bends the steel bar';
+  }
+}
+
+
+function playGame() {
+  var promptUsesChoice= prompt('Please choose superman, kryptonite, or steel bar');
+  var userChoice= getUserChoice(promptUsesChoice);
+  var computerChoice= getComputerChoice();
+  console.log(userChoice);
+  console.log(computerChoice);
+  console.log(determineWinner(userChoice, computerChoice));
+}
+playGame();
